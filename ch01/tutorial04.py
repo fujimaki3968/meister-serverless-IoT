@@ -1,3 +1,5 @@
 from functions import tutorial_post
 
-tutorial_post("makiart")
+response = tutorial_post("makiart")
+
+print(response)

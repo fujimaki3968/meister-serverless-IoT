@@ -11,5 +11,4 @@ headers = {"x-api-key": API_KEY}
 def tutorial_post(name: str):
     params = {"name": name}
     response = requests.post("https://4rddu45n7e.execute-api.us-east-1.amazonaws.com/default/ch01/post", data=json.dumps(params), headers=headers)
-    print(response.json())
     return response.json()

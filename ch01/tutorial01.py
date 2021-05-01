@@ -66,3 +66,15 @@ for string in array:
     sum_array_text_length += len(string)
 
 print("文字列合計:", sum_array_text_length)
+
+# 辞書型変数
+print("----------------------------")
+makiart = {
+    "name": "藤巻晴葵",
+    "belongs": "4J32",
+    "age": 18
+}
+
+print(makiart["name"])
+print(makiart["belongs"])
+print(makiart["age"])

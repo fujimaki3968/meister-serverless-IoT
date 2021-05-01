@@ -1,5 +1,6 @@
 from functions import tutorial_post
 
-response = tutorial_post("makiart")
+name = input("あなたの名前は？ : ")
+response = tutorial_post(name)
 
 print(response)

@@ -6,3 +6,11 @@ time = datetime.now(JST)
 
 print(time)
 print(time.hour)
+
+def lambda_handler(event, context):
+
+    # TODO implement
+    return {
+        'statusCode': 200,
+        'body': "午後・午前"
+    }

@@ -19,6 +19,18 @@ params = {
 
 headers = {"x-api-key": API_KEY}
 
-response = requests.post(base_url, json=params, headers=headers)
+try {
+    response = requests.post(base_url, json=params, headers=headers)
+    data = response.json()
 
-print(response.json())
+    if data['statusCode'] == 200:
+        print(data['body'])
+    else:
+        print("エラー")
+        print(data['body'])
+
+} except {
+    print("予期せぬエラーが発生しました。")
+}
+
+

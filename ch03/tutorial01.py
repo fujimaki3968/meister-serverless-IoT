@@ -13,7 +13,7 @@ headers = {"x-api-key": API_KEY}
 print('------- PUT -------')
 
 student_number = input("学籍番号: ")
-food = input("好きな食べ物は？ : ")
+food = input("2番目に好きな食べ物は？ : ")
 data = {
     'student_number': student_number,
     'food': food
@@ -42,5 +42,16 @@ data = {
 }
 response = requests.post(base_url+'dynamodb/query', json=data, headers=headers)
 print(response.json())
+
+### UPDATE
+print('------- UPDATE -------')
+
+food = input("一番好きな食べ物は？ : ")
+data = {
+    'student_number': student_number,
+    'food': food
+}
+response = requests.post(base_url+'dynamodb/update', json=data, headers=headers)
+
 
 ### DELETEは割愛

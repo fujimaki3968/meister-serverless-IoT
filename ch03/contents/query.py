@@ -18,6 +18,6 @@ def lambda_handler(event, context):
 
 def dynamodb_query_item(task_name: str, class_name: str):
     response = task_table.query(
-        KeyConditionExpression=Key('task_name').eq(task_name) & Key('belogings').begins_with(class_name)
+        KeyConditionExpression=Key('task_name').eq(task_name) & Key('belongings').begins_with(class_name)
     )
     return response.get('Items', [])
